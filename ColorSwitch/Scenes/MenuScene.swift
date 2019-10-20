@@ -18,7 +18,7 @@ class MenuScene: SKScene {
     func addLogo(){
         let logo = SKSpriteNode(imageNamed: "logo")
         logo.size = CGSize(width: frame.width/4, height: frame.width/4)
-        logo.position = CGPoint(x: frame.midX, y: frame.midY + logo.size.width)
+        logo.position = CGPoint(x: frame.midX, y: frame.midY + logo.size.width*2)
         addChild(logo)
     }
     
@@ -29,6 +29,7 @@ class MenuScene: SKScene {
         playLabel.fontColor = UIColor.white
         playLabel.position = CGPoint(x: frame.midX, y: frame.midY)
         addChild(playLabel)
+        animate(label: playLabel)
         
         let highScoreLabel = SKLabelNode(text: "Highscore: " + String(UserDefaults.standard.integer(forKey: "Highscore")))
         highScoreLabel.fontName = "AvenirNext-Bold"
@@ -48,5 +49,16 @@ class MenuScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let gameScene = GameScene(size: view!.bounds.size)
         view!.presentScene(gameScene)
+    }
+    
+    func animate(label: SKLabelNode){
+        let duration = 0.5
+        let fadeOut = SKAction.fadeOut(withDuration: duration)
+        let fadeIn = SKAction.fadeIn(withDuration: duration)
+        let scaleUp = SKAction.scale(to: 1.1, duration: duration)
+        let scaleDown = SKAction.scale(to: 1.0, duration: duration)
+        let fadeSequence = SKAction.sequence([fadeOut, fadeIn])
+        let scaleSequence = SKAction.sequence([scaleUp, scaleDown])
+        label.run(SKAction.repeatForever(SKAction.group([fadeSequence, scaleSequence])))
     }
 }

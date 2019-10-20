@@ -15,6 +15,7 @@
 		009DDCC1235BCC14005B4AC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009DDCBF235BCC14005B4AC0 /* LaunchScreen.storyboard */; };
 		009DDCCD235BD32C005B4AC0 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009DDCCC235BD32C005B4AC0 /* Settings.swift */; };
 		009DDCCF235BE903005B4AC0 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009DDCCE235BE903005B4AC0 /* MenuScene.swift */; };
+		009DDCD1235BF06F005B4AC0 /* bling.wav in Resources */ = {isa = PBXBuildFile; fileRef = 009DDCD0235BF06E005B4AC0 /* bling.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		009DDCC2235BCC14005B4AC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		009DDCCC235BD32C005B4AC0 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		009DDCCE235BE903005B4AC0 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		009DDCD0235BF06E005B4AC0 /* bling.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bling.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		009DDCAF235BCC10005B4AC0 /* ColorSwitch */ = {
 			isa = PBXGroup;
 			children = (
+				009DDCD0235BF06E005B4AC0 /* bling.wav */,
 				009DDCC2235BCC14005B4AC0 /* Info.plist */,
 				009DDCCB235BCEB9005B4AC0 /* Assets */,
 				009DDCCA235BCEA8005B4AC0 /* Template */,
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				009DDCBC235BCC10005B4AC0 /* Main.storyboard in Resources */,
+				009DDCD1235BF06F005B4AC0 /* bling.wav in Resources */,
 				009DDCBE235BCC14005B4AC0 /* Assets.xcassets in Resources */,
 				009DDCC1235BCC14005B4AC0 /* LaunchScreen.storyboard in Resources */,
 			);

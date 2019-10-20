@@ -106,6 +106,7 @@ extension GameScene: SKPhysicsContactDelegate{
             if let ball = contact.bodyA.node?.name == "Ball" ? contact.bodyA.node as? SKSpriteNode: contact.bodyB.node as? SKSpriteNode{
                 if currentColorIndex == switchState.rawValue {
                     score += 1
+                    run(SKAction.playSoundFileNamed("bling", waitForCompletion: false))
                     updateLabel()
                     ball.run(SKAction.fadeOut(withDuration: 0.25), completion: {
                         ball.removeFromParent()
